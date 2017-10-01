@@ -76,7 +76,16 @@ public class Main {
         studentTeacherMap.put(teacher2, studentSet2);
         studentTeacherMap.put(teacher3, studentSet3);
 
+        System.out.println("Teachers: ");
+        for(Teacher teachers: studentTeacherMap.keySet()){
+            System.out.println(teachers);
 
+        }
+
+        System.out.println("Students");
+        for(Set<Student> students: studentTeacherMap.values()){
+            System.out.println(students);
+        }
 
 
 
