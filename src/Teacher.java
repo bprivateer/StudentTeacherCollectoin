@@ -54,19 +54,12 @@ public class Teacher {
 
         Teacher teacher = (Teacher) o;
 
-        if (id != teacher.id) return false;
-        if (grade != teacher.grade) return false;
-        if (firstName != null ? !firstName.equals(teacher.firstName) : teacher.firstName != null) return false;
-        return lastName != null ? lastName.equals(teacher.lastName) : teacher.lastName == null;
+        return id == teacher.id;
     }
 
     @Override
     public int hashCode() {
-        int result = firstName != null ? firstName.hashCode() : 0;
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + id;
-        result = 31 * result + grade;
-        return result;
+        return id;
     }
 
     @Override
